@@ -1,0 +1,24 @@
+# k8s-1pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testpod
+  labels:
+    app: testpod
+spec:
+  volumes:
+  - name: hostpath-volume
+    hostPath:
+      path: /Users/kayip/go/src/golang-grpc
+  containers:
+  - name: goserver
+    image: kayiphk/golang-grpc-kafka
+    ports:
+    - containerPort: 50052
+  - name: jupyter
+    image: kayiphk/jupyter
+    ports:
+    - containerPort: 8888
+    volumeMounts:
+    - mountPath: /home/jovyan/work kay/jupyter
+      name: hostpath-volume
