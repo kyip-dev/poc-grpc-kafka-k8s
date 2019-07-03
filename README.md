@@ -6,15 +6,15 @@ A poc to showing how applicaiton communicate from topdown using jupyter, golang,
   - kayiphk/golang-grpc-kafka
     - golang server that communicate with jupyter using grpc and send message to kafka
   - kayiphk/jupyter
-    - jupyter base-notebook with grpc dependence installed
+    - [jupyter base-notebook] (https://hub.docker.com/r/jupyter/base-notebook) with grpc dependence installed
   - wurstmeister/kafka
   - wurstmeister/zookeeper
 
 ## Prerequisite
 
-Before installing the k8s services and deployments, need below software installed.
+Before installing the services and deployments using kubectl, you need install below software.
 Depending on your OS, you may have different installations.
-E.g. I develop using macbook, I further installed minikube and VirtualBox
+E.g. I develop using macbook, I further installed minikube and VirtualBox for configure the k8s cluster.
 
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * [k8s](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
@@ -27,6 +27,7 @@ After cloning the project, update the applicaiton.yaml, update the volume path  
 Then run install.sh
 ```sh
 $ cd k8s
+$ chmod +x install.sh
 $ ./install.sh
 ```
 
