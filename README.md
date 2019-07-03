@@ -31,6 +31,11 @@ $ ./install.sh
 ```
 
 ## Run jupyter
+port forward to map 127.0.0.1:8888 to access the pod
+```sh
+$ kubectl port-forward testpod 8888:8888
+```
+
 jupyter need access token to access, need check log to get the token
 ```sh
 $ kubectl log testpod jupyter
