@@ -13,11 +13,11 @@ A poc to showing how applicaiton communicate from topdown using jupyter, golang,
 ## Prerequisite
 
 Before installing the services and deployments using kubectl, you need install below software.
-Depending on your OS, you may have different installations.
-E.g. I develop using macbook, I further installed minikube and VirtualBox for configure the k8s cluster.
+Depending on your OS, you may have different docker installations.  If you are using linux, you need to further install kubeadm
 
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [k8s](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [docker](https://docs.docker.com/docker-for-mac/install/)
+* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [Chrome](https://www.google.com/chrome/)
 
 ## Spin up the services
